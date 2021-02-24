@@ -1,0 +1,237 @@
+.html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font: 100%;
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+}
+
+:root {
+  --black: hsl(0, 0%, 0%);
+  --darkgray: hsl(0, 0%, 48%);
+  --darkcyan: hsl(176, 72%, 28%);
+  --modcyan: hsl(176, 50%, 48%);
+  --ltgray: hsl(210, 6%, 94%);
+  --paddingX: 2rem;
+  --paddingY: 1.5rem;
+}
+
+.container {
+  max-width: 375px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: -1;
+  background-image: url(/images/image-hero-mobile.jpg);
+  background-position: 10% 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  width: 375px;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  padding: 30px;
+  padding-top: 40px;
+}
+
+aside {
+  position: relative;
+  z-index: 0;
+  border-radius: 0.5rem;
+  max-width: 400px;
+  margin: auto;
+  font-size: 15px;
+  margin-top: -50px;
+}
+
+.aside > * {
+  padding: var(--paddingX) var(--paddingY);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mastercraft {
+  position: relative;
+  margin-top: -25px;
+  margin-left: 170px;
+}
+
+.mastercard {
+  padding: 0 0px;
+  margin: 0;
+  border-radius: 0.5rem;
+  width: 400px;
+  background-color: white;
+  -webkit-box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--darkgray);
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px;
+}
+
+.backbutton {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--modcyan);
+  color: white;
+  border: none;
+  width: 220px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.middle {
+  padding: 0 0px;
+  margin: 0;
+  border-radius: 0.5rem;
+  width: 400px;
+  background-color: white;
+  -webkit-box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1 1fr;
+      grid-template-columns: 1 1fr;
+}
+
+hr {
+  border: solid 0.5px var(--ltgray);
+  width: 100px;
+}
+
+.about {
+  padding: 20px;
+  margin: 0;
+  border-radius: 0.5rem;
+  max-width: 400px;
+  background-color: white;
+  -webkit-box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3 1fr);
+  grid-row-gap: 20px;
+}
+
+.standcard {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--ltgray);
+  padding: 20px;
+}
+
+h3 {
+  font-weight: 900;
+}
+
+.pledge {
+  color: var(--modcyan);
+  font-weight: bold;
+}
+
+.about h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.about p {
+  font-weight: normal;
+  text-align: left;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.selectbutton {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--modcyan);
+  color: white;
+  border: none;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  font-weight: bold;
+  width: 150px;
+}
+
+.box4 {
+  padding: 10px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.progress {
+  max-width: 300px;
+  border-radius: 15px;
+  background-color: #f3ecec;
+}
+
+.progress-bar {
+  height: 15px;
+  border-radius: 25px;
+  background: #3db8af;
+}
+/*# sourceMappingURL=style.css.map */
