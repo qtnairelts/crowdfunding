@@ -1,6 +1,5 @@
 .html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font: 100%;
 }
 
@@ -23,8 +22,6 @@ body {
 }
 
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   background-image: url(/images/image-hero-mobile.jpg);
@@ -34,9 +31,7 @@ nav {
   max-width: 100%;
   height: 250px;
   margin: 0 auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   color: white;
   padding: 30px;
   padding-top: 40px;
@@ -53,15 +48,12 @@ nav {
   left: 15px;
   background-color: white;
   border-radius: 15px;
-  -webkit-box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
 }
 
 .menu-ul {
   display: block;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   line-height: 2;
   top: 0;
   right: 0;
@@ -88,7 +80,7 @@ nav {
   cursor: pointer;
 }
 
-#toggle :checked .menu {
+#toggle:checked ~ .menu {
   display: block;
 }
 
@@ -101,52 +93,46 @@ nav {
     max-width: 1440px;
     height: 300px;
   }
+
   .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
     max-width: 800px;
   }
+
   .hamburger {
     display: none;
   }
+
   .menu {
     display: block;
     top: 0px;
     margin-left: 300px;
   }
+
   .menu-ul {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     position: absolute;
   }
+
   .menu-ul li a {
     color: white;
     border: 0;
     padding: 10;
   }
+
   aside {
     padding: 0;
     margin: 10px;
     width: 800px;
   }
+
   .mastercard {
     width: 800px;
   }
 }
-
 aside {
   position: relative;
   border-radius: 0.5rem;
@@ -171,8 +157,7 @@ aside {
   border-radius: 0.5rem;
   width: 400px;
   background-color: white;
-  -webkit-box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
 }
 
@@ -190,18 +175,13 @@ p {
 }
 
 .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding: 30px;
 }
 
 .backbutton {
   text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: var(--modcyan);
   color: white;
@@ -212,11 +192,8 @@ p {
   cursor: pointer;
   outline: none;
   font-size: 16px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   padding: 10px;
   font-weight: bold;
 }
@@ -227,13 +204,10 @@ p {
   border-radius: 0.5rem;
   width: 400px;
   background-color: white;
-  -webkit-box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1 1fr;
-      grid-template-columns: 1 1fr;
+  grid-template-columns: 1 1fr;
 }
 
 hr {
@@ -247,15 +221,11 @@ hr {
   border-radius: 0.5rem;
   max-width: 400px;
   background-color: white;
-  -webkit-box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3 1fr);
   grid-row-gap: 20px;
 }
 
@@ -276,8 +246,6 @@ h3 {
 }
 
 .about h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: left;
 }
@@ -285,17 +253,13 @@ h3 {
 .about p {
   font-weight: normal;
   text-align: left;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin-left: 5px;
   margin-top: 5px;
 }
 
 .selectbutton {
   text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: var(--modcyan);
   color: white;
@@ -305,11 +269,8 @@ h3 {
   cursor: pointer;
   outline: none;
   font-size: 16px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   padding: 10px;
   font-weight: bold;
   width: 150px;
@@ -332,4 +293,5 @@ h3 {
   border-radius: 25px;
   background: #3db8af;
 }
+
 /*# sourceMappingURL=style.css.map */

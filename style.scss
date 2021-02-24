@@ -77,11 +77,10 @@ nav {
     display: block;
     cursor: pointer;
 }
-#toggle :checked {
-    .menu {
-      display : block;
-    }
+#toggle:checked ~ .menu {
+    display : block;
 }
+
 #toggle{
     opacity: 1;
 }
