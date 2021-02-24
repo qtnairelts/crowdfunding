@@ -27,14 +27,22 @@
 </head>
 
 <body>
-  <main class="contaioner">
+  <main class="main">
     <nav class="container">
       <a herf="#" class="logo"><img src="/images/logo.svg" alt="logo"></a>
-      About Discover Get Started
-      <a herf="#" class="humburger"><img src="/images/icon-hamburger.svg" alt=""></a>
+      <div class="hamburger">
+      <img src="/images/icon-hamburger.svg" alt="hamburger">
+      <input type="checkbox" name="" id="toggle">
+    </div>
+    
+    <div class="menu">
+      <ul class="menu-ul">
+        <li><a href="#">About</a> </li>
+        <li><a href="#">Discover</a></li>
+        <li><a href="#">Get Started</a></li>
+      </ul>
+    </div>
     </nav>
-
-
     <aside>
       <div class="mastercard">
         <img class="mastercraft" src="/images/logo-mastercraft.svg" alt="mastercraft">
@@ -102,7 +110,6 @@
           <span class="left">
             <h1>101<p>left</p>
             </h1>
-
           </span>
           <a href="#" class="selectbutton"> Select Reward </a>
         </div>
