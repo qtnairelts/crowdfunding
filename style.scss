@@ -48,6 +48,7 @@ nav {
     background-color:white;
     border-radius:15px;
     box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+    transition: 0.2s;
 
 }
 .menu-ul{
@@ -77,14 +78,9 @@ nav {
     display: block;
     cursor: pointer;
 }
-#toggle :checked {
-    .menu {
-      display : block;
-    }
-}
-#toggle{
-    opacity: 1;
-}
+#toggle:checked ~ .menu {
+   display: block;
+  }
 
 @media screen and (min-width:600px){
     main{
@@ -115,8 +111,7 @@ nav {
         position: absolute;
         
     }
-    .menu-ul li{
-    }
+   
     .menu-ul li a{
         color: white;
         border:0;

@@ -55,6 +55,8 @@ nav {
   border-radius: 15px;
   -webkit-box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .menu-ul {
@@ -88,12 +90,8 @@ nav {
   cursor: pointer;
 }
 
-#toggle :checked .menu {
+#toggle:checked ~ .menu {
   display: block;
-}
-
-#toggle {
-  opacity: 1;
 }
 
 @media screen and (min-width: 600px) {
