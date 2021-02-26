@@ -6,22 +6,29 @@
 
 body {
     font-family: "Commissioner", sans-serif;
+    margin: 0px;
 }
 
 :root {
     --black: hsl(0, 0%, 0%);
     --darkgray: hsl(0, 0%, 48%);
     --darkcyan: hsl(176, 72%, 28%);
-    --modcyan: hsl(176, 50%, 48%);
+    --modcyan: rgb(61, 184, 175);
     --ltgray: hsl(210, 6%, 94%);
     --paddingX: 2rem;
     --paddingY: 1.5rem;
 }
 .container {
     max-width: 375px;
+    
 }
 nav {
     display: flex;
+    flex-direction: row;
+    // grid-template-columns:repeat(1,1fr);
+    // grid-template-rows: repeat(3,1fr);
+    // grid-gap: 10px;
+
     position: relative;
     background-image: url(/images/image-hero-mobile.jpg);
     background-position: 10% 90%;
@@ -34,6 +41,7 @@ nav {
     color: white;
     padding: 30px;
     padding-top: 40px;
+    
 }
 
 .menu{
@@ -87,6 +95,8 @@ nav {
 
 
 aside {
+    display: flex;
+    flex-direction: row;
     position: relative;
     border-radius: 0.5rem;
     max-width: 400px;
@@ -104,14 +114,14 @@ aside {
 .mastercard {
     position: relative;
     border-radius: 25px;
-    padding: 0 0px;
-    margin: 0;
+    margin-bottom: 100px;
     margin-top: -40px;
     border-radius: 0.5rem;
     width: 400px;
+    height: 400px;
     background-color: white;
     box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
-    margin-bottom: 20px;
+    
 }
 
 h1 {
@@ -149,13 +159,6 @@ p {
     padding: 10px;
     font-weight: bold;
 }
-.bookmark{
-    width: 65px;
-}
-.bookmark img{
-    width: 100%;
-    height: auto;
-}
 
 .bookm{
     display: none;
@@ -163,8 +166,7 @@ p {
 
 
 .middle {
-    padding: 0 0px;
-    margin: 0;
+    margin-top: 50px;
     border-radius: 0.5rem;
     width: 400px;
     background-color: white;
@@ -182,7 +184,7 @@ hr {
     padding: 20px;
     margin: 0;
     border-radius: 0.5rem;
-    width: 400px;
+    max-width: 375px;
     background-color: white;
     box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
     margin-bottom: 20px;
@@ -198,15 +200,13 @@ hr {
     border-style: solid;
     border-color: var(--ltgray);
     padding: 20px;
-    
-    
+    opacity: 1;
 }
 h3{
     
     font-weight: 900;
 }
 .pledge{
-   
     color:var(--modcyan);
     font-weight: bold;
 }
@@ -267,15 +267,16 @@ h3{
         height: 400px;
     }
     .container{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
         max-width: 1440px;
-        
+       
     }
     nav{
         background-image: url(/images/image-hero-desktop.jpg);
-        
+        display: flex;
+        justify-content: flex-end;
+       
     }
 
     .hamburger{
@@ -283,23 +284,34 @@ h3{
     }
     
     .menu{
-        display:block;
+        grid-area: 1/2/2/4;
+        display: flex;
+        align-items: flex-start;
+        z-index: 999;
+        margin: auto 0;
+        width: 400px;
         top: 0px;
-        margin-left: 300px;
-       
+        left: 415px;
+        background-color: white;
+        border-radius: 15px;
+        -webkit-box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+                box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
 
     }
     .menu-ul{
         display:inline-flex;
         flex-direction: row;
         position: absolute;
-        
+        padding: 0;
+        margin: 0;
     }
-   
+
     .menu-ul li a{
         color: white;
         border:0;
-        padding:10;
+        padding: 0 20px;
     }
     aside{
        max-width: 800px;
@@ -309,17 +321,27 @@ h3{
         position: relative;
         margin-left: 380px;
     }
-    .mastercard, .middle, .about{
+    .mastercard, .middle, .about, .standcard{
         box-sizing: border-box;
-        width: 800px;
-        
+        width: 800px;  
+
+    }
+    .mastercard{
+        height: 300px;
     }
   
+  
     
-    .bookmark{
-        height: 62px;
-        width: 62px;
+    .bookmarks {
+       width: 140px;
+       height: 60px;
     }
+    .bookmarks a img{
+        content: url(/images/icon-webbookmark.svg);
+       
+        
+    }
+      
     
     .bookm{
         display: flex;
@@ -330,21 +352,20 @@ h3{
         color: hsl(176, 72%, 28%);
         font-weight: bold;
         padding: 0 20px;
-        margin-top: -67px;
-        width: 140px;
-        height: 65px;
-        
+        margin-top: -60px;
+        width: 130px;
+        height: 60px; 
     }
 
     
     
 
     .middle{
+        margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows:repeat(2,3fr,3fr);
         padding: 30px;
-        max-width: 800px;
     }
     .box4{ 
         grid-area:2/1/3/4; 
@@ -362,6 +383,7 @@ h3{
        
     }
     .standcard{
+       
         display:grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(3, 1fr, 1fr, 1fr);
@@ -370,10 +392,20 @@ h3{
     .pledge{
         grid-area: 1/3/2/4;
         align-self: center;
+        justify-self: flex-end;
+        margin-right: 20px;
      
+    }
+    .standcard{
+        max-width: 800px;
+        width: 720px;
+       
+       
+      
     }
     .standcard p{
         grid-area: 2/1/3/4;
+        
     }
     .left{
         grid-area: 3/1/4/2;
@@ -382,6 +414,14 @@ h3{
     .selectbutton{
         grid-area: 3/3/4/4;
         align-self: center;
-        margin-right: 50px;
+        
+        
     }
+    .about{
+        max-width: 800px;
+        padding: 40px;
+       
+        
+    }
+    
 }
