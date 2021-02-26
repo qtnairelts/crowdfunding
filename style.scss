@@ -90,8 +90,12 @@ nav {
 }
 #toggle:checked ~ .menu {
     display : block;
-    
     }	
+#toggle:checked ~ .hamburger {
+    content: url(/images/icon-close-menu.svg);
+    width: 20px;
+    height: 20px;
+        }   
 
 
 aside {
@@ -167,7 +171,6 @@ p {
     display: none;
    
 }
-
 .bookm{
     display: none;
 }

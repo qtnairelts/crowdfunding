@@ -102,6 +102,12 @@ nav {
   display: block;
 }
 
+#toggle:checked ~ .hamburger {
+  content: url(/images/icon-close-menu.svg);
+  width: 20px;
+  height: 20px;
+}
+
 aside {
   display: -webkit-box;
   display: -ms-flexbox;
