@@ -160,11 +160,24 @@ p {
     font-weight: bold;
 }
 
+.bookmar,.bookm{
+    cursor: pointer;
+}
+#mark{
+    display: none;
+   
+}
+
 .bookm{
     display: none;
 }
 
-
+#mark:checked ~ .bookm{
+  color: var(--darkgray);
+    }	
+ #mark:checked ~ .bookmar{
+      content: url(/images/icon-graybookmark.svg);
+ }	
 .middle {
     margin-top: 50px;
     border-radius: 0.5rem;
@@ -287,7 +300,6 @@ h3{
         grid-area: 1/2/2/4;
         display: flex;
         align-items: flex-start;
-        z-index: 999;
         margin: auto 0;
         width: 400px;
         top: 0px;
@@ -330,16 +342,17 @@ h3{
         height: 300px;
     }
   
-  
+    .backbutton:hover{
+        background-color: var(--darkcyan);
+    }
+    
     
     .bookmarks {
        width: 140px;
        height: 60px;
     }
-    .bookmarks a img{
+    .bookmarks img{
         content: url(/images/icon-webbookmark.svg);
-       
-        
     }
       
     
@@ -355,7 +368,10 @@ h3{
         margin-top: -60px;
         width: 130px;
         height: 60px; 
+        
     }
+
+    
 
     
     

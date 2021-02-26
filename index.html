@@ -13,7 +13,7 @@
   <title> Crowdfunding product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
- 
+
   <style>
     .attribution {
       font-size: 11px;
@@ -29,19 +29,19 @@
 <body>
   <main class="main">
     <nav class="container">
-      
+
       <span><a herf="#" class="logo"><img src="/images/logo.svg" alt="logo"></a></span>
       <input type="checkbox" name="" id="toggle">
       <label for='toggle' class="hamburger"><img src="/images/icon-hamburger.svg" alt="hamburger"></label>
-      <span class="menu"> 
+      <span class="menu">
         <ul class="menu-ul">
           <li><a href="#">About</a> </li>
           <li><a href="#">Discover</a></li>
           <li><a href="#">Get Started</a></li>
         </ul>
-      </span> 
-      
-      
+      </span>
+
+
     </nav>
     <aside>
       <div class="mastercard">
@@ -52,9 +52,16 @@
         </p>
         <div class="button">
           <a href="#" class="backbutton"> Back this project </a>
-          <div class="bookmarks"><a href="#"><img src="/images/icon-bookmark.svg" alt=""></a>
-            <div class="bookm">bookmarked</div>
+          
+          <div class="bookmarks">
+          <label for="mark">
+          <input type="checkbox" name="" id="mark">
+          <img class="bookmar"src="/images/icon-bookmark.svg" alt="">
+          <span class="bookm">bookmarked</span>
+          </label>
+          
           </div>
+        
         </div>
         <div class="middle">
           <div class="box1">
@@ -109,10 +116,11 @@
               Backer member list.
             </p>
             <span class="left">
-              <h1><span class="bamstock">101</span><p>left</p>
+              <h1><span class="bamstock">101</span>
+                <p>left</p>
               </h1>
             </span>
-            <a href="#"  class="selectbutton"> Select Reward </a>
+            <a href="#" class="selectbutton"> Select Reward </a>
           </div>
           <div id="black" class="standcard">
             <h3>Black Edition Stand</h3>
@@ -123,7 +131,8 @@
               included.
             </p>
             <span class="left">
-              <h1><span class="blackstock">64</span><p>left</p>
+              <h1><span class="blackstock">64</span>
+                <p>left</p>
               </h1>
 
             </span>
@@ -138,9 +147,11 @@
               our Backer member list. Shipping is included.
             </p>
             <span class="left">
-              <h1><span class="mahstock">0</span><p>left</p></h1>
-            
-            <a href="#" id="mahSelectButton" class="selectbutton"> Out of Stock</a>
+              <h1><span class="mahstock">0</span>
+                <p>left</p>
+              </h1>
+
+              <a href="#" id="mahSelectButton" class="selectbutton"> Out of Stock</a>
           </div>
         </div>
     </aside>

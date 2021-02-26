@@ -182,8 +182,24 @@ p {
   font-weight: bold;
 }
 
+.bookmar, .bookm {
+  cursor: pointer;
+}
+
+#mark {
+  display: none;
+}
+
 .bookm {
   display: none;
+}
+
+#mark:checked ~ .bookm {
+  color: var(--darkgray);
+}
+
+#mark:checked ~ .bookmar {
+  content: url(/images/icon-graybookmark.svg);
 }
 
 .middle {
@@ -338,7 +354,6 @@ h3 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    z-index: 999;
     margin: auto 0;
     width: 400px;
     top: 0px;
@@ -382,11 +397,14 @@ h3 {
   .mastercard {
     height: 300px;
   }
+  .backbutton:hover {
+    background-color: var(--darkcyan);
+  }
   .bookmarks {
     width: 140px;
     height: 60px;
   }
-  .bookmarks a img {
+  .bookmarks img {
     content: url(/images/icon-webbookmark.svg);
   }
   .bookm {
