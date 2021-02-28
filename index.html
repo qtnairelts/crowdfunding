@@ -110,7 +110,7 @@
             focused on the task at hand. Featuring artisan craftsmanship, the simplicity of design creates extra desk
             space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.
           </p>
-          <div id="bam" class="standcard">
+          <div id="Tier1" class="standcard">
             <h3>Bamboo Stand</h3>
             <span class="pledge">Pledge $25 or more</span>
             <p>
@@ -119,13 +119,13 @@
               Backer member list.
             </p>
             <span class="left">
-              <h1><span class="bamstock">101</span>
+              <h1><span class="stock">101</span>
                 <p>left</p>
               </h1>
             </span>
             <a href="#" class="selectbutton"> Select Reward </a>
           </div>
-          <div id="black" class="standcard">
+          <div id="Tier2" class="standcard">
             <h3>Black Edition Stand</h3>
             <span class="pledge">Pledge $75 or more </span>
             <p>
@@ -134,14 +134,14 @@
               included.
             </p>
             <span class="left">
-              <h1><span class="blackstock">64</span>
+              <h1><span class="stock">64</span>
                 <p>left</p>
               </h1>
 
             </span>
             <a href="#" class="selectbutton">Select Reward</a>
           </div>
-          <div id="mah" class="standcard">
+          <div id="Tier3" class="standcard">
             <h3>Mahogany Special Edition</h3>
             <span id="mahPledge" class="pledge"> Pledge $200 or more </span>
             <p>
@@ -150,7 +150,7 @@
               our Backer member list. Shipping is included.
             </p>
             <span class="left">
-              <h1><span class="mahstock">0</span>
+              <h1><span class="stock">0</span>
                 <p>left</p>
               </h1>
             </span>
@@ -159,21 +159,25 @@
         </div>
 
         <!------------------------------- Selection modal start --------------------------->
-        <div class="backproject">
+        <div id="backproject" class="backproject">
+          <div class="backhead">
           <h3>Back this project</h3>
+          <img class="closebutton" src="/images/icon-close-modal.svg" alt="">
+          </div>
           <p>
             Want to support us in bringing Mastercraft Bamboo Monitor
             Riser out in the world?
           </p>
-          <div id="no" class="noreward standcard">
-            <label class="radio"><span class="radio__input"><input type="radio" name="radAnswer" id="radio1"><span
+          <div name="card" id="card1" class="noreward standcard">
+  
+            <label for="radiolab0"class="radio"><span class="radio__input"><input type="radio" id="radiolab0" name="radAnswer" value="0"><span
                   class="radio__control"></span></span><span class="radio__label">
                 <h3>Pledge with no reward</h3>
               </span></span></label>
             <p>Choose to support us without a reward if you simply believe in our project. As a backer, you will be
               signed
               up to receive product updates via email.</p>
-            <div id="enter1" class="enter">
+            <div id="enter1" name="enter" class="enter">
               <hr>
               <p>Enter your pledge</p>
               <div class="submit">
@@ -184,12 +188,14 @@
               </div>
             </div>
           </div>
-          <div id="bam" class="standcard">
-            <label class="radio"><span class="radio__input"><input type="radio" name="radAnswer" id="radio2"><span
-                  class="radio__control"></span></span><span class="radio__label">
-                <h3>Bamboo Stand</h3>
-                <span class="pledge">Pledge $25 or more</span>
-              </span></span></label>
+          <div name="card" id="card2" class="standcard">
+          
+          <label for="radiolab1" class="radio"><span class="radio__input"><input type="radio" id="radiolab1" name="radAnswer" value="1"><span
+            class="radio__control"></span></span><span class="radio__label">
+          <h3>Bamboo Stand</h3>
+          <span class="pledge">Pledge $25 or more </span>
+        </span></span></label>
+                
             <p>
               You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
               you’ll be added to a special
@@ -201,7 +207,7 @@
               </h1>
             </span>
             <a href="#" class="selectbutton"> Select Reward </a>
-            <div id="enter2" class="enter">
+            <div id="enter2" name="enter" class="enter">
               <hr>
               <p>Enter your pledge</p>
               <div class="submit">
@@ -212,8 +218,8 @@
               </div>
             </div>
           </div>
-          <div id="black" class="standcard">
-            <label class="radio"><span class="radio__input"><input type="radio" name="radAnswer" id="radio3"><span
+          <div name="card" id="card3" class="standcard">
+            <label for="radiolab2" class="radio"><span class="radio__input"><input type="radio" id="radiolab2" name="radAnswer" value="2"><span
                   class="radio__control"></span></span><span class="radio__label">
                 <h3>Black Edition Stand</h3>
                 <span class="pledge">Pledge $75 or more </span>
@@ -224,12 +230,12 @@
               included.
             </p>
             <span class="left">
-              <h1><span class="blackstock">64</span>
+              <h1><span class="stock">64</span>
                 <p>left</p>
               </h1>
             </span>
             <a href="#" class="selectbutton">Select Reward</a>
-            <div id="enter2" class="enter">
+            <div id="enter3" name="enter" class="enter">
               <hr>
               <p>Enter your pledge</p>
               <div class="submit">
@@ -240,8 +246,8 @@
               </div>
             </div>
           </div>
-          <div id="mah" class="standcard">
-            <label class="radio"><span class="radio__input"><input type="radio" name="radAnswer" id="radio4"><span
+          <div name="card" id="card4" class="standcard">
+            <label for="radiolab3" class="radio"><span class="radio__input"><input type="radio" id="radiolab3" name="radAnswer" value="3"><span
                   class="radio__control"></span></span><span class="radio__label">
                 <h3>Mahogany Special Edition</h3>
                 <span id="mahPledge" class="pledge"> Pledge $200 or more </span>
@@ -252,12 +258,12 @@
               our Backer member list. Shipping is included.
             </p>
             <span class="left">
-              <h1><span class="mahstock">0</span>
+              <h1><span class="stock">0</span>
                 <p>left</p>
               </h1>
             </span>
-            <a href="#" id="mahSelectButton" class="selectbutton"> Out of Stock</a>
-            <div id="enter4" class="enter">
+            <a href="#" id="card4" class="selectbutton"> Out of Stock</a>
+            <div id="enter4" name="enter" class="enter">
               <hr>
               <p>Enter your pledge</p>
               <div class="submit">

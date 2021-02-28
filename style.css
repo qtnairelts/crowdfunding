@@ -157,6 +157,8 @@ aside {
   margin: auto;
   font-size: 15px;
   margin-top: -50px;
+  background-color: white;
+  height: 2000px;
 }
 
 .mastercraft {
@@ -224,7 +226,7 @@ p {
 }
 
 .backbutton:hover {
-  cursor: pointer;
+  background-color: var(--darkcyan);
 }
 
 .bookmar, .bookm {
@@ -367,9 +369,9 @@ h3 {
   display: block;
   background-color: white;
   position: relative;
-  opacity: 0;
+  z-index: -99;
   padding: 20px;
-  margin-top: -3000px;
+  margin-top: -3100px;
   border-radius: 0.5rem;
   max-width: 375px;
   -webkit-box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
@@ -382,6 +384,22 @@ h3 {
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3 1fr);
   grid-row-gap: 20px;
+}
+
+.backhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.backproject img {
+  height: 15px;
+  cursor: pointer;
 }
 
 .backproject p {
@@ -422,6 +440,7 @@ input {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 input:checked + .radio__control {
@@ -496,7 +515,8 @@ input:checked + .radio__control {
 }
 
 .enter {
-  display: none;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -504,21 +524,27 @@ input:checked + .radio__control {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
 }
 
 .enter hr {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/2/3;
   width: 350px;
 }
 
-.submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 .enter p {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2/1/3/2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,7 +555,20 @@ input:checked + .radio__control {
       align-content: center;
 }
 
+.submit {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
 .price {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 3/1/4/2;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,17 +579,23 @@ input:checked + .radio__control {
   border-radius: 50px;
   cursor: pointer;
   outline: none;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
   font-weight: bold;
   border: 3px solid var(--ltgray);
 }
 
 .continue {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3/2/4/3;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -639,6 +684,8 @@ input:checked + .radio__control {
   }
   aside {
     max-width: 800px;
+    background-color: white;
+    height: 2000px;
   }
   .mastercraft {
     position: relative;
@@ -763,6 +810,90 @@ input:checked + .radio__control {
   .about {
     max-width: 800px;
     padding: 40px;
+  }
+  .backproject {
+    margin-top: -2100px;
+    z-index: 999;
+  }
+  .standcard {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (0.5fr)[2];
+        grid-template-rows: repeat(2, 0.5fr);
+  }
+  .radio {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/2/2;
+  }
+  .left {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1/2/2/3;
+    justify-self: flex-end;
+    margin-right: 30px;
+  }
+  .standcard p {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 2/1/3/3;
+  }
+  .pledge {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .enter {
+    display: none;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 3/1/5/3;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (0.5fr)[2];
+        grid-template-rows: repeat(2, 0.5fr);
+  }
+  .enter hr {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 1/1/2/3;
+    width: 100%;
+  }
+  .enter p {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2/1/3/2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 40px;
+  }
+  .enter.submit {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 2/2/3/3;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 /*# sourceMappingURL=style.css.map */
