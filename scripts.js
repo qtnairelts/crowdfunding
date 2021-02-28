@@ -4,9 +4,12 @@ let mahselect = document.getElementById('mahSelectButton')
 let mahPledge = document.getElementById('mahPledge')
 let myCheckbox = document.getElementById("toggle");
 let dim = document.getElementById("dim");
-let enter = document.getElementById("enter2")
-let bam = document.getElementById("bam")
 // let style = getComputedStyle(bam)
+
+
+
+
+
 
 const Model = [
     {
@@ -83,6 +86,20 @@ for (var i = 0, length = radios.length; i < length; i++) {
 //     mahselect.style.backgroundColor = "rgb(122, 122, 122)";
 //     mahPledge.style.color = "rgb(122, 122, 122)"
 // }
+let continues = document.getElementById("continues")
+let successsheet = document.getElementById("successs")
+let gotitbutton = document.getElementById("gotit")
+console.log(successsheet.style)
+continues.onclick = function () {
+    backprojectsheet.style.zIndex = "-999"
+    successsheet.style.zIndex ="999";
+    dimm();
+}
+gotitbutton.onclick = function () {
+    successsheet.style.zIndex ="-999";
+    undim();
+}
+
 ///////////menu-open&close///////////////
 myCheckbox.oninput = function () {
     // console.log(myCheckbox.checked);
@@ -95,7 +112,7 @@ myCheckbox.oninput = function () {
 }
 //////////////dim-function///////////
 function dimm() {
-    dim.style.height = 1440 + 'px';
+    dim.style.height = 3000 + 'px';
 }
 function undim() {
     dim.style.height = 0 + 'px';

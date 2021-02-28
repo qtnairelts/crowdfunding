@@ -137,7 +137,7 @@ aside {
     font-size: 15px;
     margin-top: -50px;
     background-color: white;
-    height: 2000px;
+    height: 1000px;
 }
 
 .mastercraft {
@@ -419,7 +419,8 @@ input:checked + .radio__control {
       flex-direction: column;
       align-items: center;
       grid-template-columns: repeat(2,1fr);
-      grid-template-rows: repeat(3,1fr);
+      grid-template-rows: repeat(2,0.5fr);
+      justify-items: center;
 
   }
 
@@ -430,15 +431,20 @@ input:checked + .radio__control {
 
 
   .enter p{
-    grid-area: 2/1/3/2;
+    grid-area: 2/1/3/3;
       display: flex;
       justify-content: center;
       align-content: center;
+      
   }
   .submit{
+    grid-area: 3/1/4/3;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,1fr);
+    grid-gap: 20px;
     justify-items: center;
+ 
 }
   .price{
     grid-area: 3/1/4/2;
@@ -457,7 +463,7 @@ input:checked + .radio__control {
     border: 3px solid var(--ltgray);
   }
   .continue{
-    grid-area: 3/2/4/3;
+    grid-area: 3/3/4/4;
     text-decoration: none;
     display: flex;
     background-color: var(--modcyan);
@@ -474,7 +480,37 @@ input:checked + .radio__control {
     font-weight: bold;
     border: 3px solid var(--ltgray);
   }
+  .success{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows:1fr 1fr 2fr 1fr;
+    background-color: white;
+    position: relative;
+    z-index: -99;
+    padding: 20px;
+    margin-top: -2700px;
+    border-radius: 0.5rem;
+    max-width: 375px;
+    box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    justify-items: center;
+  }
 
+  .tick{
+    grid-area: 1/1/2/2;
+  }
+  .success h1{
+    grid-area: 2/1/3/2;
+    align-items: center;
+  }
+  .success p{
+    grid-area: 3/1/4/2;
+    align-items: center;
+  }
+  .got{
+    grid-area: 4/1/5/2;
+    margin-top: 20px;
+  }
 
 
 
@@ -688,10 +724,11 @@ input:checked + .radio__control {
         margin-left: 40px;
         
     }
-    .enter.submit{
+   .submit{
         grid-area: 2/2/3/3;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        grid-gap: 5px;
        
     }
     
