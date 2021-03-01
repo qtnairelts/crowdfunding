@@ -113,18 +113,20 @@ for (var j =0 ; j < stock.length; j++) {
 }
 /////////////////////////////////////////////////////////
 //////////////continue & Gotit button////////////////
-let continues = document.getElementById("continues")
+let continues = document.getElementsByClassName("continue")
 let successsheet = document.getElementById("successs")
 let gotitbutton = document.getElementById("gotit")
 let dollar = document.getElementById("value")
 let dollarvalue = parseFloat(dollar.innerHTML)
 let progressvalue = document.getElementById("progressbar").value
-
-continues.onclick = function () {
+for(let i in continues){
+continues[i].onclick = function () {
     backprojectsheet.style.zIndex = "-999"
     successsheet.style.zIndex = "999";
     dimm();
 }
+}
+
 gotitbutton.onclick = function () {
     dollarvalue += 1
     dollar.innerHTML = dollarvalue
