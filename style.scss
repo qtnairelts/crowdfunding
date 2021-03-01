@@ -300,15 +300,20 @@ h3{
     margin-bottom: 30px;
     
 }
-.progress {
-    max-width: 300px;
+
+  progress{
+   
     border-radius: 15px;
     background-color:rgb(243, 236, 236);
   }
-.progress-bar {
-    height: 15px;
-    border-radius: 25px;
-    background:   hsl(176, 50%, 48%);
+  progress::-webkit-progress-bar {
+    width: 300px;
+    border-radius: 15px;
+    background-color:rgb(243, 236, 236);
+  }
+  progress::-webkit-progress-value {
+    background-color: hsl(176, 50%, 48%);
+    border-radius: 15px;
   }
 
   .backproject{
@@ -415,7 +420,7 @@ input:checked + .radio__control {
   }
  
   .enter{
-      display: grid;
+      display: none;
       flex-direction: column;
       align-items: center;
       grid-template-columns: repeat(2,1fr);
@@ -486,9 +491,9 @@ input:checked + .radio__control {
     grid-template-rows:1fr 1fr 2fr 1fr;
     background-color: white;
     position: relative;
-    z-index: -99;
+    z-index: -999;
     padding: 20px;
-    margin-top: -2700px;
+    margin-top: -1800px;
     border-radius: 0.5rem;
     max-width: 375px;
     box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
@@ -510,6 +515,7 @@ input:checked + .radio__control {
   .got{
     grid-area: 4/1/5/2;
     margin-top: 20px;
+    
   }
 
 
@@ -640,7 +646,8 @@ input:checked + .radio__control {
        
     }
     .standcard{
-       
+        max-width: 800px;
+        width: 720px;
         display:grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(3, 1fr, 1fr, 1fr);
@@ -652,13 +659,6 @@ input:checked + .radio__control {
         justify-self: flex-end;
         margin-right: 20px;
      
-    }
-    .standcard{
-        max-width: 800px;
-        width: 720px;
-       
-       
-      
     }
     .standcard p{
         grid-area: 2/1/3/4;
@@ -679,31 +679,35 @@ input:checked + .radio__control {
         padding: 40px;
     }
     .backproject{
-        margin-top: -2100px;
-        z-index: 999;
+        margin-top: -2700px;
+        z-index: -999;
     }
-    .standcard{
+    .backproject.standcard{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,0.5fr);
         
     }
-    .radio{
+    .backproject.radio{
         grid-area: 1/1/2/2;
     }
-
     
-    .left{
+    .backproject.left{
         grid-area: 1/2/2/3;
         justify-self: flex-end;
         margin-right: 30px;
         
     }
-    .standcard p{
+    .backproject.standcard p{
         grid-area: 2/1/3/3;
     }
-    .pledge{
+    
+    .pledges{
+        color:var(--modcyan);
+        font-weight: bold;
        align-self:flex-start;
+
+       
     }
     .enter{
          display: none;
@@ -717,8 +721,7 @@ input:checked + .radio__control {
     }
     
     .enter p{
-      
-       grid-area: 2/1/3/2;
+        grid-area: 2/1/3/2;
         display: flex;
         justify-content: flex-start;
         margin-left: 40px;
@@ -731,5 +734,13 @@ input:checked + .radio__control {
         grid-gap: 5px;
        
     }
+    .success{
+        display: grid;
+        max-width: 800px;
+        width: 750px;
+        margin-top: -1400px;
+        justify-self: center;
+    }
+   
     
 }
