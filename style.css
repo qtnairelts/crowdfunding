@@ -640,7 +640,7 @@ input:checked + .radio__control {
       grid-template-rows: 1fr 1fr 2fr 1fr;
   background-color: white;
   position: relative;
-  z-index: 999;
+  z-index: -999;
   padding: 20px;
   margin-top: -1800px;
   border-radius: 0.5rem;

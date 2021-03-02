@@ -166,4 +166,13 @@ closebutton.onclick = function () {
     backprojectsheet.style.zIndex = "-999";
     undim();
 }
-/////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+////////////////////Selectbutton////////////////////////
+let selectbutton = document.getElementsByClassName("selectbutton")
+
+for (let i in selectbutton) {
+    selectbutton[i].onclick = function () {
+        backprojectsheet.style.zIndex = "999";
+        dimm();
+    }
+}
