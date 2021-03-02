@@ -19,22 +19,20 @@ body {
     --paddingX: 2rem;
     --paddingY: 1.5rem;
 }
-.dim{
-    display : block;
+.dim {
+    display: block;
     position: absolute;
     align-items: flex-start;
     width: 1400px;
-    height: 0px;;
+    height: 0px;
     background-color: var(--darkgray);
     top: 0;
     left: 0;
     margin-left: -1000;
     opacity: 0.5;
-   
- }
+}
 .container {
     max-width: 375px;
-    
 }
 nav {
     display: flex;
@@ -55,10 +53,9 @@ nav {
     color: white;
     padding: 30px;
     padding-top: 40px;
-    
 }
 
-.menu{
+.menu {
     display: none;
     position: absolute;
     z-index: 999;
@@ -66,66 +63,62 @@ nav {
     width: 400px;
     top: 80px;
     left: 15px;
-    background-color:white;
-    border-radius:15px;
+    background-color: white;
+    border-radius: 15px;
     box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
     transition: 0.2s;
-
 }
-.menu-ul{
+.menu-ul {
     display: block;
-    align-items:center;
+    align-items: center;
     line-height: 2;
     top: 0;
-    right: 0;;
+    right: 0;
     padding: 0px;
-    margin-bottom: 1px ;
-    
+    margin-bottom: 1px;
 }
 
-.menu-ul li{   
+.menu-ul li {
     list-style-type: none;
 }
-.menu-ul li a{
+.menu-ul li a {
     display: block;
-    color:black;
+    color: black;
     text-decoration: none;
     padding: 20px 25px;
     font-size: 16px;
     text-align: center;
-    border-bottom:1px solid var(--ltgray);
+    border-bottom: 1px solid var(--ltgray);
 }
 .hamburger {
     display: block;
     cursor: pointer;
 }
-#toggle{
+#toggle {
     display: none;
 }
 #toggle:checked ~ .menu {
-    display : block;
-    }	
+    display: block;
+}
 #toggle:checked ~ .dim {
-    display : flex;
+    display: flex;
     position: absolute;
     align-items: flex-start;
     width: 1400px;
-    height: 1400px;;
+    height: 1400px;
     background-color: var(--darkgray);
     top: 0;
     left: 0;
     margin-left: -1000;
     opacity: 0.5;
-    
-    }	 
+}
 #toggle:checked ~ .hamburger {
     position: relative;
     z-index: 9999;
     content: url(/images/icon-close-menu.svg);
     width: 20px;
     height: 20px;
-        }   
-
+}
 
 aside {
     display: flex;
@@ -155,7 +148,6 @@ aside {
     height: 400px;
     background-color: white;
     box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
-    
 }
 
 h1 {
@@ -193,27 +185,27 @@ p {
     padding: 10px;
     font-weight: bold;
 }
-.backbutton:hover{
-    background-color:var(--darkcyan)
+.backbutton:hover {
+    background-color: var(--darkcyan);
 }
 
-.bookmar,.bookm{
+.bookmar,
+.bookm {
     cursor: pointer;
 }
-#mark{
+#mark {
     display: none;
-   
 }
-.bookm{
+.bookm {
     display: none;
 }
 
-#mark:checked ~ .bookm{
-  color: var(--darkgray);
-    }	
-#mark:checked ~ .bookmar{
-      content: url(/images/icon-graybookmark.svg);
- }	
+#mark:checked ~ .bookm {
+    color: var(--darkgray);
+}
+#mark:checked ~ .bookmar {
+    content: url(/images/icon-graybookmark.svg);
+}
 .middle {
     margin-top: 50px;
     border-radius: 0.5rem;
@@ -229,7 +221,7 @@ hr {
     width: 100px;
 }
 
-.about{
+.about {
     padding: 20px;
     margin: 0;
     border-radius: 0.5rem;
@@ -238,43 +230,39 @@ hr {
     box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
     margin-bottom: 20px;
     display: grid;
-    grid-template-columns:repeat(1,1fr);
-    grid-template-rows:repeat(3 1fr);
-    grid-row-gap:20px ;
-    
-
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3 1fr);
+    grid-row-gap: 20px;
 }
-.standcard{
+.standcard {
     border-radius: 10px;
     border-style: solid;
     border-color: var(--ltgray);
     padding: 20px;
     opacity: 1;
 }
-h3{
-    
+h3 {
     font-weight: 900;
 }
-.pledge{
-    color:var(--modcyan);
+.pledge {
+    color: var(--modcyan);
     font-weight: bold;
 }
 
-.about h1{
+.about h1 {
     display: flex;
     text-align: left;
 }
 
-.about p{
+.about p {
     font-weight: normal;
     text-align: left;
     align-self: center;
     margin-left: 5px;
     margin-top: 5px;
-
 }
 
-.selectbutton{
+.selectbutton {
     text-decoration: none;
     display: flex;
     background-color: var(--modcyan);
@@ -291,167 +279,157 @@ h3{
     font-weight: bold;
     width: 150px;
 }
-.selectbutton:hover{
-    background-color:var(--darkcyan)
+.selectbutton:hover {
+    background-color: var(--darkcyan);
 }
-.box4{
+.box4 {
     padding: 10px;
     margin-left: 30px;
     margin-bottom: 30px;
-    
 }
 
-  progress{
-   
+progress {
     border-radius: 15px;
-    background-color:rgb(243, 236, 236);
-  }
-  progress::-webkit-progress-bar {
+    background-color: rgb(243, 236, 236);
+}
+progress::-webkit-progress-bar {
     width: 300px;
     border-radius: 15px;
-    background-color:rgb(243, 236, 236);
-  }
-  progress::-webkit-progress-value {
+    background-color: rgb(243, 236, 236);
+}
+progress::-webkit-progress-value {
     background-color: hsl(176, 50%, 48%);
     border-radius: 15px;
-  }
+}
 
-  .backproject{
-      display: block;
-      background-color: white;
-      position: relative;
-      z-index: -99;
-      padding: 20px;
-      margin-top: -3100px;
-      border-radius: 0.5rem;
-      max-width: 375px;
-      box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
-      margin-bottom: 20px;
-      display: grid;
-      grid-template-columns:repeat(1,1fr);
-      grid-template-rows:repeat(3 1fr);
-      grid-row-gap:20px ;
-  }
-.backhead{
+.backproject {
+    display: block;
+    background-color: white;
+    position: relative;
+    z-index: -99;
+    padding: 20px;
+    margin-top: -3100px;
+    border-radius: 0.5rem;
+    max-width: 375px;
+    box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3 1fr);
+    grid-row-gap: 20px;
+}
+.backhead {
     display: flex;
     justify-content: space-between;
     margin: 0;
     padding: 0;
 }
-.backproject img{
-  height: 15px;
-  cursor: pointer;
-}  
+.backproject img {
+    height: 15px;
+    cursor: pointer;
+}
 
-
-.backproject p{
+.backproject p {
     text-align: left;
     padding: 5px;
 }
 
-.radio{
+.radio {
     display: grid;
-    grid-template-columns: repeat(1,40px 300px);
+    grid-template-columns: repeat(1, 40px 300px);
     grid-template-rows: 40px;
     grid-gap: 10px;
     align-items: center;
     margin: 0;
- 
 }
-input{
+input {
     opacity: 0;
     width: 0;
     height: 0;
-    }
+}
 
-.radio__input{
-      grid-area: 1/1/2/2;
-      align-items: center;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-    }
+.radio__input {
+    grid-area: 1/1/2/2;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
 input:checked + .radio__control {
-        background: radial-gradient( hsl(176, 50%, 47%) 50%, rgba(255, 0, 0, 0) 51%);
-      }
-  
+    background: radial-gradient(hsl(176, 50%, 47%) 50%, rgba(255, 0, 0, 0) 51%);
+}
 
-  .radio__control {
-   
+.radio__control {
     display: block;
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
     border: 0.2em solid var(--ltgray);
     transform: translateY(-0.1em);
-  }
-  .radio__label{
+}
+.radio__label {
     grid-area: 1/2/2/3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-  }
+}
 
-.backproject h1{
+.backproject h1 {
     padding-left: 10px;
     display: flex;
     align-items: center;
     margin: 0;
 }
- .backproject h4{
-     font-size: 20px;
-     display: flex;
-     align-items: center;
-     margin: 0;
-  }
+.backproject h4 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
 
-  .backproject p{
+.backproject p {
     padding: 10px;
-  }
+}
 
-  .backproject .selectbutton{
-      display: none;
-  }
+.backproject .selectbutton {
+    display: none;
+}
 
-  .backproject .standcard{
-    box-sizing: border-box; 
+.backproject .standcard {
+    box-sizing: border-box;
     padding: 15px 2px;
-  }
- 
-  .enter{
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      grid-template-columns: repeat(2,1fr);
-      grid-template-rows: repeat(2,0.5fr);
-      justify-items: center;
+}
 
-  }
+.enter {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 0.5fr);
+    justify-items: center;
+}
 
-  .enter hr{
+.enter hr {
     grid-area: 1/1/2/3;
     width: 350px;
-  }
+}
 
-
-  .enter p{
+.enter p {
     grid-area: 2/1/3/3;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      
-  }
-  .submit{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.submit {
     grid-area: 3/1/4/3;
     display: grid;
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-gap: 20px;
     justify-items: center;
- 
 }
-  .price{
+.price {
     grid-area: 3/1/4/2;
     text-decoration: none;
     display: flex;
@@ -466,8 +444,8 @@ input:checked + .radio__control {
     padding: 5px;
     font-weight: bold;
     border: 3px solid var(--ltgray);
-  }
-  .continue{
+}
+.continue {
     grid-area: 3/3/4/4;
     text-decoration: none;
     display: flex;
@@ -484,14 +462,14 @@ input:checked + .radio__control {
     padding: 5px;
     font-weight: bold;
     border: 3px solid var(--ltgray);
-  }
-  .success{
+}
+.success {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows:1fr 1fr 2fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 1fr 2fr 1fr;
     background-color: white;
     position: relative;
-    z-index: -999;
+    z-index: 999;
     padding: 20px;
     margin-top: -1800px;
     border-radius: 0.5rem;
@@ -499,52 +477,45 @@ input:checked + .radio__control {
     box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
     margin-bottom: 20px;
     justify-items: center;
-  }
+}
 
-  .tick{
+.tick {
     grid-area: 1/1/2/2;
-  }
-  .success h1{
+}
+.success h1 {
     grid-area: 2/1/3/2;
     align-items: center;
-  }
-  .success p{
+}
+.success p {
     grid-area: 3/1/4/2;
     align-items: center;
-  }
-  .got{
+}
+.got {
     grid-area: 4/1/5/2;
     margin-top: 20px;
-    
-  }
+}
 
-
-
-  
-  @media screen and (min-width:800px){
-    main{
+@media screen and (min-width: 800px) {
+    main {
         max-width: 1440px;
         height: 400px;
     }
-    .container{
+    .container {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1440px;
-       
     }
-    nav{
+    nav {
         background-image: url(/images/image-hero-desktop.jpg);
         display: flex;
         justify-content: flex-end;
-      
-       
     }
 
-    .hamburger{
+    .hamburger {
         display: none;
     }
-    
-    .menu{
+
+    .menu {
         grid-area: 1/2/2/4;
         display: flex;
         align-items: flex-start;
@@ -555,192 +526,181 @@ input:checked + .radio__control {
         background-color: white;
         border-radius: 15px;
         -webkit-box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
-                box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0.5px 1rem rgba(0, 0, 0, 0.15);
         -webkit-transition: 0.2s;
         transition: 0.2s;
-
     }
-    .menu-ul{
-        display:inline-flex;
+    .menu-ul {
+        display: inline-flex;
         flex-direction: row;
         position: absolute;
         padding: 0;
         margin: 0;
     }
 
-    .menu-ul li a{
+    .menu-ul li a {
         color: white;
-        border:0;
+        border: 0;
         padding: 0 20px;
     }
-    aside{
-       max-width: 800px;
-       background-color: white;
-       height: 2000px;
-       
-       
+    aside {
+        max-width: 800px;
+        background-color: white;
+        height: 2000px;
     }
     .mastercraft {
         position: relative;
         margin-left: 380px;
     }
-    .mastercard, .middle, .about, .standcard, .backproject{
+    .mastercard,
+    .middle,
+    .about,
+    .standcard,
+    .backproject {
         box-sizing: border-box;
-        max-width: 800px; 
-        width: 800px;  
-
+        max-width: 800px;
+        width: 800px;
     }
-    .mastercard{
+    .mastercard {
         height: 300px;
     }
-    
-    .backbutton:hover{
-        
+
+    .backbutton:hover {
         background-color: var(--darkcyan);
     }
-    
-    
+
     .bookmarks {
-       width: 140px;
-       height: 60px;
+        width: 140px;
+        height: 60px;
     }
-    .bookmarks img{
+    .bookmarks img {
         content: url(/images/icon-webbookmark.svg);
     }
-      
-    
-    .bookm{
+
+    .bookm {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color:var(--ltgray) ;
+        background-color: var(--ltgray);
         border-radius: 50px;
         color: hsl(176, 72%, 28%);
         font-weight: bold;
         padding: 0 20px;
         margin-top: -60px;
         width: 130px;
-        height: 60px; 
-        
+        height: 60px;
     }
-    .middle{
+    .middle {
         margin-top: 40px;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows:repeat(2,3fr,3fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr, 1fr);
         padding: 30px;
     }
-    .box4{ 
-        grid-area:2/1/3/4; 
-        width: 100%;   
+    .box1,
+    .box2 {
+        border-right: solid 3px var(--ltgray);
+    }
+    .box4 {
+        grid-area: 2/1/3/4;
+        width: 100%;
         display: inline-flex;
-        justify-content: center;
-        padding:30px 0;
-        
-        
+        padding: 30px 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-    .progress, .progress-bar{
-       max-width: 500px;
-       height:15px;
-       width: 500px;
-       
+    hr {
+        display: none;
     }
-    .standcard{
+    progress::-webkit-progress-bar {
+        width: 700px;
+        border-radius: 15px;
+        background-color: rgb(243, 236, 236);
+    }
+    .standcard {
         max-width: 800px;
         width: 720px;
-        display:grid;
-        grid-template-columns: repeat(2,1fr);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr, 1fr, 1fr);
     }
-    
-    .pledge{
+
+    .pledge {
         grid-area: 1/3/2/4;
         align-self: center;
         justify-self: flex-end;
         margin-right: 20px;
-     
     }
-    .standcard p{
+    .standcard p {
         grid-area: 2/1/3/4;
-        
     }
-    .left{
+    .left {
         grid-area: 3/1/4/2;
     }
 
-    .selectbutton{
+    .selectbutton {
         grid-area: 3/3/4/4;
         align-self: center;
-        
-        
     }
-    .about{
+    .about {
         max-width: 800px;
         padding: 40px;
     }
-    .backproject{
+    .backproject {
         margin-top: -2000px;
         z-index: -99;
     }
-    .backproject.standcard{
+    .backproject.standcard {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,0.5fr);
-        
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 0.5fr);
     }
-    .backproject.radio{
+    .backproject.radio {
         grid-area: 1/1/2/2;
     }
-    
-    .backproject.left{
+
+    .backproject.left {
         grid-area: 1/2/2/3;
         justify-self: flex-end;
         margin-right: 30px;
-        
     }
-    .backproject.standcard p{
+    .backproject.standcard p {
         grid-area: 2/1/3/3;
     }
-    
-    .pledges{
-        color:var(--modcyan);
-        font-weight: bold;
-       align-self:flex-start;
 
-       
+    .pledges {
+        color: var(--modcyan);
+        font-weight: bold;
+        align-self: flex-start;
     }
-    .enter{
-         display: none;
-         grid-area: 3/1/5/3;
-         grid-template-columns: repeat(2,1fr);
-         grid-template-rows: repeat(2,0.5fr);
-        }
-    .enter hr{
+    .enter {
+        display: none;
+        grid-area: 3/1/5/3;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 0.5fr);
+    }
+    .enter hr {
         grid-area: 1/1/2/3;
         width: 100%;
     }
-    
-    .enter p{
+
+    .enter p {
         grid-area: 2/1/3/2;
         display: flex;
         justify-content: flex-start;
         margin-left: 40px;
-        
     }
-   .submit{
+    .submit {
         grid-area: 2/2/3/3;
         display: grid;
         justify-items: center;
         grid-gap: 5px;
-       
     }
-    .success{
+    .success {
         display: grid;
         max-width: 800px;
         width: 750px;
         margin-top: -1400px;
         justify-self: center;
     }
-   
-    
 }

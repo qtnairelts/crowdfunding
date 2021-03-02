@@ -229,7 +229,8 @@ p {
   background-color: var(--darkcyan);
 }
 
-.bookmar, .bookm {
+.bookmar,
+.bookm {
   cursor: pointer;
 }
 
@@ -639,7 +640,7 @@ input:checked + .radio__control {
       grid-template-rows: 1fr 1fr 2fr 1fr;
   background-color: white;
   position: relative;
-  z-index: -999;
+  z-index: 999;
   padding: 20px;
   margin-top: -1800px;
   border-radius: 0.5rem;
@@ -762,7 +763,11 @@ input:checked + .radio__control {
     position: relative;
     margin-left: 380px;
   }
-  .mastercard, .middle, .about, .standcard, .backproject {
+  .mastercard,
+  .middle,
+  .about,
+  .standcard,
+  .backproject {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     max-width: 800px;
@@ -806,9 +811,13 @@ input:checked + .radio__control {
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: (3fr, 3fr)[2];
-        grid-template-rows: repeat(2, 3fr, 3fr);
+    -ms-grid-rows: (1fr, 1fr)[2];
+        grid-template-rows: repeat(2, 1fr, 1fr);
     padding: 30px;
+  }
+  .box1,
+  .box2 {
+    border-right: solid 3px var(--ltgray);
   }
   .box4 {
     -ms-grid-row: 2;
@@ -820,15 +829,17 @@ input:checked + .radio__control {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     padding: 30px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
-  .progress, .progress-bar {
-    max-width: 500px;
-    height: 15px;
-    width: 500px;
+  hr {
+    display: none;
+  }
+  progress::-webkit-progress-bar {
+    width: 700px;
+    border-radius: 15px;
+    background-color: #f3ecec;
   }
   .standcard {
     max-width: 800px;

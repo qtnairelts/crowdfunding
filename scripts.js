@@ -2,13 +2,8 @@
 
 let myCheckbox = document.getElementById("toggle");
 let dim = document.getElementById("dim");
-// let style = getComputedStyle(bam)
 let card = document.getElementsByName('card')
 let enter = document.getElementsByName("enter")
-
-
-
-
 
 
 const Model = [
@@ -84,12 +79,12 @@ for (var i = 0, length = radios.length; i < length; i++) {
                     enter[j].style.display = "grid";
                 }
             }
-          
+
 
         }
         ////////////////////////////////////////////////////////
-        
-        
+
+
 
     }
 }
@@ -99,44 +94,46 @@ let stock = document.getElementsByName('amount')
 let selectButton = document.getElementsByName('SelectButton')
 let Pledge = document.getElementsByName('pledge')
 
-for (var j =0 ; j < stock.length; j++) {
+for (var j = 0; j < stock.length; j++) {
     // console.log(selectButton[j])
     // stock[j].textContent = Model[j + 1].stocks;
     if (stock[j].innerHTML == 0) {
         card[j].style.opacity = 0.5;
         card[j].style.pointerEvents = 'none'
-        card[j+4].style.opacity = 0.5;
-        card[j+4].style.pointerEvents = 'none'
+        card[j + 4].style.opacity = 0.5;
+        card[j + 4].style.pointerEvents = 'none'
         selectButton[j].style.backgroundColor = "rgb(122, 122, 122)";
         Pledge[j].style.color = "rgb(122, 122, 122)"
-    }   
+    }
 }
 /////////////////////////////////////////////////////////
-//////////////continue & Gotit button////////////////
+//////////////continue  button////////////////
 let continues = document.getElementsByClassName("continue")
 let successsheet = document.getElementById("successs")
 let gotitbutton = document.getElementById("gotit")
 let dollar = document.getElementById("value")
 let dollarvalue = parseFloat(dollar.innerHTML)
 let progressvalue = document.getElementById("progressbar").value
-for(let i in continues){
-continues[i].onclick = function () {
-    backprojectsheet.style.zIndex = "-999"
-    successsheet.style.zIndex = "999";
-    dimm();
-}
-}
+let price = document.getElementsByName("price")
 
+for (let i in continues) {
+    continues[i].onclick = function () {
+        backprojectsheet.style.zIndex = "-999"
+        successsheet.style.zIndex = "999";
+        dollarvalue += parseInt(price[i].innerHTML)
+        console.log(parseInt(price[i].innerHTML))
+        dollar.innerHTML = dollarvalue
+        dimm();
+    }
+}
+////////////////////GOT IT BUTTON///////////////////
 gotitbutton.onclick = function () {
-    dollarvalue += 1
-    dollar.innerHTML = dollarvalue
-    console.log(dollarvalue)
-    document.getElementById("progressbar").value = dollarvalue/100000*100
-    // console.log(document.getElementById("progressbar").value )
+
+    document.getElementById("progressbar").value = dollarvalue / 100000 * 100
     successsheet.style.zIndex = "-999";
     undim();
-}
 
+}
 
 ///////////menu-open&close///////////////
 myCheckbox.oninput = function () {
