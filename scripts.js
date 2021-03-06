@@ -42,12 +42,14 @@ let getcard = ""
 let getenter = ""
 var radios = document.getElementsByName('radAnswer')
 
+
+
+
 for (var i = 0, length = radios.length; i < length; i++) {
     radios[i].oninput = function () {
         for (var i = 0, length = radios.length; i < length; i++) {
             if (radios[i].checked) {
                 getid = radios[i].id;
-
             }
         }
         for (let i = 0; i <= Model.length; i++) {
@@ -57,14 +59,9 @@ for (var i = 0, length = radios.length; i < length; i++) {
                 break
             };
         }
-        // console.log("getID:", getid)
-        // console.log("getcard", getcard)
-        // console.log("getenter:", getenter)
-        //////////////////change-border-color&prop-out-enter///////////////////
-
+        //////////////////change-border-color & prop-out-enter///////////////////
         for (var i = 0; i < card.length; i++) {
             for (var j = 0; j < enter.length; j++) {
-
                 // console.log("card::",card.length)
                 // console.log("enter::",enter.length)
                 if (card[i].id !== getcard && enter[j].id !== getenter) {
@@ -79,13 +76,8 @@ for (var i = 0, length = radios.length; i < length; i++) {
                     enter[j].style.display = "grid";
                 }
             }
-
-
         }
         ////////////////////////////////////////////////////////
-
-
-
     }
 }
 
@@ -118,26 +110,26 @@ let price = document.getElementsByName("price")
 
 for (let i in continues) {
     continues[i].onclick = function () {
-        backprojectsheet.style.zIndex = "-999"
-        successsheet.style.zIndex = "999";
+        projectSheetClose()
+        successClose()
+        dimm();
         dollarvalue += parseInt(price[i].innerHTML)
         console.log(parseInt(price[i].innerHTML))
         dollar.innerHTML = dollarvalue
-        dimm();
     }
+}
+////////////////Success sheet close//////////////
+function successClose() {
+    successsheet.style.zIndex = "999";
 }
 ////////////////////GOT IT BUTTON///////////////////
 gotitbutton.onclick = function () {
-
     document.getElementById("progressbar").value = dollarvalue / 100000 * 100
     successsheet.style.zIndex = "-999";
     undim();
-
 }
-
 ///////////menu-open&close///////////////
 myCheckbox.oninput = function () {
-    // console.log(myCheckbox.checked);
     if (myCheckbox.checked) {
         dimm();
         console.log(dim.style.height)
@@ -153,23 +145,28 @@ function undim() {
     dim.style.height = 0 + 'px';
 }
 ///////////////////////////////////
-
 ////////////////backprojectbuttons//////////////
 let backprojectsheet = document.getElementById("backproject");
 let backbutton = document.querySelector(".backbutton");
 let closebutton = document.querySelector(".closebutton");
 backbutton.onclick = function () {
-    backprojectsheet.style.zIndex = "999";
+    projectSheetOpen()
     dimm();
 }
 closebutton.onclick = function () {
-    backprojectsheet.style.zIndex = "-999";
+    projectSheetClose()
     undim();
+}
+////////////Project Sheet Open & Close/////////////////
+function projectSheetOpen() {
+    backprojectsheet.style.zIndex = "999";
+}
+function projectSheetClose() {
+    backprojectsheet.style.zIndex = "-999";
 }
 ///////////////////////////////////////////////////////
 ////////////////////Selectbutton////////////////////////
 let selectbutton = document.getElementsByClassName("selectbutton")
-
 for (let i in selectbutton) {
     selectbutton[i].onclick = function () {
         backprojectsheet.style.zIndex = "999";
