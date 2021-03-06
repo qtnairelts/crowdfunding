@@ -42,9 +42,6 @@ let getcard = ""
 let getenter = ""
 var radios = document.getElementsByName('radAnswer')
 
-
-
-
 for (var i = 0, length = radios.length; i < length; i++) {
     radios[i].oninput = function () {
         for (var i = 0, length = radios.length; i < length; i++) {
